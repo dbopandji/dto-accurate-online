@@ -31,9 +31,9 @@ public class WebDriveHooks {
     public void quitWebdriver(Scenario scenario) {
         if (scenario.isFailed()) {
             takeScreenShoot(scenario);
-            sendReportToSlack(":rotating_light: *Scenario failed!*");
+            sendReportToSlack(":rotating_light: *" + env("MU_NAME") + " - failed!*");
         } else {
-            sendReportToSlack(":white_check_mark: *Scenario success!*");
+            sendReportToSlack(":white_check_mark: *" + env("MU_NAME") + " - success!*");
         }
         WebDriverInstance.quit();
     }
