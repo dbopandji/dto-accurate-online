@@ -32,7 +32,7 @@ public class WebDriverInstance {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setExperimentalOption("prefs", chromePrefs);
         
-        if(env("HEADLESS") == 1){
+        if(env("HEADLESS") != null){
             chromeOptions.addArguments("--headless");
         }
         
