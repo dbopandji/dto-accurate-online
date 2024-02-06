@@ -32,9 +32,9 @@ public class WebDriverInstance {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setExperimentalOption("prefs", chromePrefs);
         
-        if(env("HEADLESS") != null){
+        //if(env("HEADLESS") = "0"){
             chromeOptions.addArguments("--headless");
-        }
+        //}
         
         chromeOptions.addArguments("--window-size=1920,1080");
 
